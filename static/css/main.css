@@ -2,6 +2,7 @@ body, html{
 }
 body{
   padding-top: 32px;
+  background-color: ghostwhite;
 }
 #wrapper{
   width: 100%;
