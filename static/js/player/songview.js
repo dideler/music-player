@@ -65,7 +65,8 @@ SongView = Backbone.View.extend({
     // height of one item
     this.individual_height = 42;
     // how many to show at a time
-    this.how_many_drawn = Math.ceil(window.innerHeight / this.individual_height) * 2;
+    // this.how_many_drawn = Math.ceil(window.innerHeight / this.individual_height) * 2;
+    this.how_many_drawn = player.songs.length;
     if(this.how_many_drawn > player.songs.length){
       this.how_many_drawn = player.songs.length;
     }
