@@ -261,8 +261,10 @@ function PlayState(){
     $(this.names.playpause).removeClass("fa-play fa-pause");
     if(this.is_playing){
       $(this.names.playpause).addClass("fa-pause");
+      $(this.names.playpause).attr('title', 'Pause');
     } else {
       $(this.names.playpause).addClass("fa-play");
+      $(this.names.playpause).attr('title', 'Play');
     }
   };
   this.togglePlayState = function(){
