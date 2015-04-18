@@ -413,7 +413,6 @@ function PlayState(){
     this.vol.slider().on('slide', function(){
       volume_level = Math.round(player.vol.slider('getValue'));
       player.setVolume(volume_level);
-      $(".slider-track").attr('title', volume_level +'%');
     });
   };
   this.setVolume = function(value){
