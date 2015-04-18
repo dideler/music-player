@@ -411,7 +411,7 @@ function PlayState(){
   this.setVolElem = function(elem){
     this.vol = elem;
     this.vol.slider().on('slide', function(){
-      volume_level = Math.round(player.vol.slider('getValue'));
+      volume_level = player.vol.slider('getValue');
       player.setVolume(volume_level);
     });
   };
