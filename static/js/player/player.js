@@ -406,8 +406,11 @@ function PlayState(){
   };
   this.setVolElem = function(elem){
     this.vol = elem;
-    this.vol.slider()
-      .on('slide', function(){ player.setVolume(player.vol.slider('getValue')); });
+    this.vol.slider().on('slide', function(){
+      volume_level = Math.round(player.vol.slider('getValue'));
+      player.setVolume(volume_level);
+      $(".slider-track").attr('title', volume_level +'%');
+    });
   };
   this.setVolume = function(value){
     this.current_track.volume = value / 100.00;
